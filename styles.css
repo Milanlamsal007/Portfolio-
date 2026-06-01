@@ -563,6 +563,12 @@ spline-viewer::part(logo) {
 .fi-links a { font-family: var(--font-mono); font-size: 0.8rem; color: var(--text-3); }
 .fi-links a:hover { color: var(--cyan); }
 .footer-bottom { margin-top: 40px; border-top: 1px solid rgba(255,255,255,0.05); padding-top: 20px; display: flex; justify-content: space-between; font-family: var(--font-mono); font-size: 0.7rem; color: var(--text-3); }
+.fi-social { display: flex; gap: 20px; }
+.fi-social a { color: var(--text-2); font-size: 1.2rem; transition: var(--t); }
+.fi-social a:hover { color: var(--cyan); text-shadow: 0 0 10px var(--cyan-glow); }
+.comms-socials { display: flex; gap: 15px; margin-top: 25px; }
+.cs-btn { width: 45px; height: 45px; display: flex; align-items: center; justify-content: center; border: 1px solid var(--cyan-dim); background: var(--bg-hex); color: var(--text-2); font-size: 1.1rem; transition: var(--t); }
+.cs-btn:hover { color: var(--cyan); border-color: var(--cyan); box-shadow: 0 0 15px var(--cyan-glow); }
 
 /* ── RESPONSIVE ──────────────────────────────────────────────── */
 @media (max-width: 1024px) {

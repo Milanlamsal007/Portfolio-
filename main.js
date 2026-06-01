@@ -481,13 +481,26 @@ function initContactForm() {
         submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i><span>Sending…</span>';
         submitBtn.disabled  = true;
 
-        setTimeout(() => {
-            submitBtn.innerHTML = orig;
-            submitBtn.disabled  = false;
-            success.classList.add('show');
-            form.reset();
-            setTimeout(() => success.classList.remove('show'), 5500);
-        }, 1400);
+        const data = { name, email, subject: qs('#f-subject', form)?.value?.trim() || '', message: msg };
+
+        fetch('https://formspree.io/f/YOUR_FORMSPREE_ENDPOINT', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(data),
+        })
+            .then(res => {
+                if (!res.ok) throw new Error('Send failed');
+                submitBtn.innerHTML = orig;
+                submitBtn.disabled  = false;
+                success.classList.add('show');
+                form.reset();
+                setTimeout(() => success.classList.remove('show'), 5500);
+            })
+            .catch(() => {
+                submitBtn.innerHTML = orig;
+                submitBtn.disabled  = false;
+                alert('Transmission failed. Please try again later.');
+            });
     });
 
     /* Focus icon colour */
