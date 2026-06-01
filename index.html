@@ -1,0 +1,1034 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Milan Lamsal — UI/UX Designer & Web Developer. Level 99 Digital Operator.">
+    <title>Milan Lamsal // OPERATOR PROFILE</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&family=Orbitron:wght@400;500;600;700;800;900&family=Share+Tech+Mono&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <!-- ██ BOOT LOADER ██ -->
+    <div id="loader">
+        <div class="boot-screen">
+            <div class="boot-logo">
+                <div class="boot-hex">
+                    <div class="boot-hex-inner">
+                        <span class="boot-id">ML</span>
+                        <span class="boot-rank">LVL 99</span>
+                    </div>
+                </div>
+                <div class="boot-rings">
+                    <div class="ring r1"></div>
+                    <div class="ring r2"></div>
+                    <div class="ring r3"></div>
+                </div>
+            </div>
+            <div class="boot-log" id="boot-log">
+                <div class="boot-line">
+                    <span class="bl-status pending" id="bl-1">[ ··· ]</span>
+                    <span class="bl-text">LOADING OPERATOR DATABASE</span>
+                </div>
+                <div class="boot-line">
+                    <span class="bl-status pending" id="bl-2">[ ··· ]</span>
+                    <span class="bl-text">CALIBRATING 3D ENGINE</span>
+                </div>
+                <div class="boot-line">
+                    <span class="bl-status pending" id="bl-3">[ ··· ]</span>
+                    <span class="bl-text">ENCRYPTING NEURAL LINK</span>
+                </div>
+                <div class="boot-line">
+                    <span class="bl-status pending" id="bl-4">[ ··· ]</span>
+                    <span class="bl-text">DEPLOYING ASSETS</span>
+                </div>
+            </div>
+            <div class="boot-bar-wrap">
+                <div class="boot-bar-label">
+                    <span>SYSTEM ONLINE</span>
+                    <span id="boot-pct">0%</span>
+                </div>
+                <div class="boot-bar">
+                    <div class="boot-fill" id="boot-fill"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ██ SCANLINE OVERLAY ██ -->
+    <div class="scanlines" aria-hidden="true"></div>
+
+    <!-- ██ NAVBAR ██ -->
+    <nav id="navbar">
+        <div class="nav-inner">
+            <a href="#hero" class="nav-brand">
+                <div class="brand-hex"><span>ML</span></div>
+                <div class="brand-text">
+                    <span class="brand-name">MILAN LAMSAL</span>
+                    <span class="brand-rank">OPERATOR LVL 99</span>
+                </div>
+            </a>
+
+            <div class="nav-center">
+                <ul class="nav-links">
+                    <li><a href="#about" class="nav-link"><span class="nl-num">01</span>PROFILE</a></li>
+                    <li><a href="#skills" class="nav-link"><span class="nl-num">02</span>LOADOUT</a></li>
+                    <li><a href="#projects" class="nav-link"><span class="nl-num">03</span>MISSIONS</a></li>
+                    <li><a href="#experience" class="nav-link"><span class="nl-num">04</span>SERVICE</a></li>
+                    <li><a href="#leadership" class="nav-link"><span class="nl-num">05</span>MEDALS</a></li>
+                    <li><a href="#contact" class="nav-link"><span class="nl-num">06</span>COMMS</a></li>
+                </ul>
+            </div>
+
+            <div class="nav-right">
+                <div class="hud-ping">
+                    <span class="ping-dot"></span>
+                    <span class="ping-text">ONLINE</span>
+                </div>
+                <button id="theme-toggle" aria-label="Toggle theme">
+                    <i class="fas fa-sun" id="theme-icon"></i>
+                </button>
+                <a href="#contact" class="deploy-btn">DEPLOY</a>
+                <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </div>
+        <div class="mobile-menu" id="mobile-menu" aria-hidden="true">
+            <a href="#about" class="mobile-link">01 — PROFILE</a>
+            <a href="#skills" class="mobile-link">02 — LOADOUT</a>
+            <a href="#projects" class="mobile-link">03 — MISSIONS</a>
+            <a href="#experience" class="mobile-link">04 — SERVICE RECORD</a>
+            <a href="#leadership" class="mobile-link">05 — MEDALS</a>
+            <a href="#contact" class="mobile-link">06 — COMMS</a>
+        </div>
+    </nav>
+
+    <!-- ██ BACKGROUND CANVAS ██ -->
+    <canvas id="bg-canvas" aria-hidden="true"></canvas>
+
+    <!-- ██ HERO ██ -->
+    <section id="hero">
+
+        <div class="hero-left">
+            <div class="hero-tag">
+                <span class="tag-blink">▶</span>
+                <span>AVAILABLE FOR DEPLOYMENT</span>
+            </div>
+
+            <div class="hero-name-block">
+                <div class="hero-callsign">// OPERATOR</div>
+                <h1 class="hero-name glitch-text" data-text="MILAN LAMSAL">MILAN LAMSAL</h1>
+                <div class="hero-typing-wrap">
+                    <span class="typing-label">CLASS:</span>
+                    <span id="typing-text" class="typing-out"></span>
+                    <span class="typing-cur">▌</span>
+                </div>
+            </div>
+
+            <p class="hero-bio">
+                Elite digital operator specialising in UI/UX design and full-stack development.
+                Computer Engineering graduate. Deploys premium digital experiences across all theatres.
+            </p>
+
+            <div class="hero-xp-block">
+                <div class="xp-row">
+                    <span class="xp-label">XP</span>
+                    <div class="xp-bar-wrap">
+                        <div class="xp-bar-fill" style="--xp:80%"></div>
+                    </div>
+                    <span class="xp-val">80 / 100</span>
+                </div>
+                <div class="xp-row">
+                    <span class="xp-label">HP</span>
+                    <div class="xp-bar-wrap">
+                        <div class="xp-bar-fill hp-fill" style="--xp:100%"></div>
+                    </div>
+                    <span class="xp-val">100 / 100</span>
+                </div>
+            </div>
+
+            <div class="hero-btns">
+                <a href="#projects" class="game-btn primary">
+                    <i class="fas fa-crosshairs"></i> VIEW MISSIONS
+                </a>
+                <a href="#contact" class="game-btn secondary">
+                    <i class="fas fa-satellite-dish"></i> OPEN COMMS
+                </a>
+            </div>
+        </div>
+
+
+
+        <!-- Bottom HUD -->
+        <div class="hero-hud-bottom">
+            <div class="hud-stat">
+                <span class="hs-num counter-val" data-target="8">0</span>+
+                <span class="hs-label">PROJECTS</span>
+            </div>
+            <div class="hud-sep">▪</div>
+            <div class="hud-stat">
+                <span class="hs-num counter-val" data-target="2.5">0</span>+
+                <span class="hs-label">YRS EXP</span>
+            </div>
+            <div class="hud-sep">▪</div>
+            <div class="hud-stat">
+                <span class="hs-num counter-val" data-target="10">0</span>+
+                <span class="hs-label">TECH SKILLS</span>
+            </div>
+            <div class="hud-sep">▪</div>
+            <div class="hud-stat">
+                <span class="hs-num">100</span>%
+                <span class="hs-label">COMMITTED</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- ██ ABOUT / OPERATOR PROFILE ██ -->
+    <section id="about">
+
+        <div class="container">
+            <div class="section-head">
+                <div class="sh-num">01</div>
+                <div class="sh-text">
+                    <span class="sh-tag">WHO I AM</span>
+                    <h2 class="sh-title">OPERATOR <span class="accent-gold">PROFILE</span></h2>
+                </div>
+                <div class="sh-line"></div>
+            </div>
+
+            <div class="about-grid">
+                <div class="about-info">
+                    <div class="info-header">
+                        <div class="info-badge">
+                            <div>
+                                <div class="ib-name">MILAN LAMSAL</div>
+                                <div class="ib-role">UI/UX Engineer · Web Dev</div>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="about-para">
+                        Computer Engineering graduate with elite-level skills in UI/UX design and full-stack web
+                        development.
+                        Deployed across multiple high-value missions — from designing interfaces at SRIYOG to
+                        engineering scalable
+                        applications at Spiralogics. Currently accepting new contracts.
+                    </p>
+                    <p class="about-para">
+                        Strategy: bridge the gap between pixel-perfect design and battle-hardened code.
+                        Every pixel is intentional. Every function is optimised. No bugs survive inspection.
+                    </p>
+                    <div class="stat-grid">
+                        <div class="sg-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div><span class="sg-label">BASE</span><span class="sg-val">Kathmandu, Nepal</span></div>
+                        </div>
+                        <div class="sg-item">
+                            <i class="fas fa-graduation-cap"></i>
+                            <div><span class="sg-label">TRAINING</span><span class="sg-val">B.E. Computer
+                                    Engineering</span></div>
+                        </div>
+                        <div class="sg-item">
+                            <i class="fas fa-briefcase"></i>
+                            <div><span class="sg-label">STATUS</span><span class="sg-val online-blink">●
+                                    AVAILABLE</span></div>
+                        </div>
+                        <div class="sg-item">
+                            <i class="fas fa-envelope"></i>
+                            <div><span class="sg-label">SECURE COMMS</span><span
+                                    class="sg-val">milanlamsal2020@gmail.com</span></div>
+                        </div>
+                    </div>
+                    <div class="about-btns">
+                        <a href="#contact" class="game-btn primary sm">
+                            <i class="fas fa-paper-plane"></i> CONTACT
+                        </a>
+                        <a href="#" class="game-btn secondary sm">
+                            <i class="fas fa-download"></i> DOWNLOAD CV
+                        </a>
+                    </div>
+                </div>
+
+                <div class="about-cards">
+                    <!-- Character Stats Card -->
+                    <div class="char-card hud-card">
+                        <div class="hud-card-label">OPERATOR STATS</div>
+                        <div class="char-stat-list">
+                            <div class="csl-row">
+                                <span class="csl-name">DESIGN</span>
+                                <div class="csl-bar">
+                                    <div class="csl-fill" style="--w:90%;--c:#f5c518"></div>
+                                </div>
+                                <span class="csl-val">90</span>
+                            </div>
+                            <div class="csl-row">
+                                <span class="csl-name">FRONTEND</span>
+                                <div class="csl-bar">
+                                    <div class="csl-fill" style="--w:88%;--c:#00d4ff"></div>
+                                </div>
+                                <span class="csl-val">88</span>
+                            </div>
+                            <div class="csl-row">
+                                <span class="csl-name">EDITING</span>
+                                <div class="csl-bar">
+                                    <div class="csl-fill" style="--w:80%;--c:#39ff14"></div>
+                                </div>
+                                <span class="csl-val">80</span>
+                            </div>
+                            <div class="csl-row">
+                                <span class="csl-name">STRATEGY</span>
+                                <div class="csl-bar">
+                                    <div class="csl-fill" style="--w:85%;--c:#ff6600"></div>
+                                </div>
+                                <span class="csl-val">85</span>
+                            </div>
+                            <div class="csl-row">
+                                <span class="csl-name">LEADERSHIP</span>
+                                <div class="csl-bar">
+                                    <div class="csl-fill" style="--w:92%;--c:#aa44ff"></div>
+                                </div>
+                                <span class="csl-val">92</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Active Buffs -->
+                    <div class="buffs-card hud-card">
+                        <div class="hud-card-label">ACTIVE BUFFS</div>
+                        <div class="buffs-grid">
+                            <div class="buff-item"><i class="fab fa-figma"></i><span>Figma Pro</span></div>
+                            <div class="buff-item"><i class="fab fa-js"></i><span>JS Master</span></div>
+                            <div class="buff-item"><i class="fab fa-node-js"></i><span>Node.js</span></div>
+                            <div class="buff-item"><i class="fab fa-php"></i><span>Premiere Pro</span></div>
+                            <div class="buff-item"><i class="fab fa-css3-alt"></i><span>CSS</span></div>
+                            <div class="buff-item"><i class="fas fa-database"></i><span>MySQL</span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ██ SKILLS / TACTICAL LOADOUT ██ -->
+    <section id="skills">
+
+        <div class="container">
+            <div class="section-head">
+                <div class="sh-num">02</div>
+                <div class="sh-text">
+                    <span class="sh-tag">CAPABILITIES</span>
+                    <h2 class="sh-title">TACTICAL <span class="accent-cyan">LOADOUT</span></h2>
+                </div>
+                <div class="sh-line"></div>
+            </div>
+
+            <div class="loadout-grid">
+
+                <div class="loadout-slot hud-card">
+                    <div class="ls-header">
+                        <div class="ls-icon purple"><i class="fas fa-palette"></i></div>
+                        <div>
+                            <div class="ls-title">DESIGN</div>
+                            <div class="ls-sub">Creative Arsenal</div>
+                        </div>
+                        <div class="ls-tier">TIER S</div>
+                    </div>
+                    <div class="ls-skills">
+                        <div class="lss-row"><span>Figma</span>
+                            <div class="lss-bar">
+                                <div data-level="90" style="--c:#f5c518"></div>
+                            </div><span class="lss-num">90</span>
+                        </div>
+                        <div class="lss-row"><span>UI/UX Design</span>
+                            <div class="lss-bar">
+                                <div data-level="88" style="--c:#f5c518"></div>
+                            </div><span class="lss-num">88</span>
+                        </div>
+                        <div class="lss-row"><span>Prototyping</span>
+                            <div class="lss-bar">
+                                <div data-level="85" style="--c:#f5c518"></div>
+                            </div><span class="lss-num">85</span>
+                        </div>
+                        <div class="lss-row"><span>User Research</span>
+                            <div class="lss-bar">
+                                <div data-level="82" style="--c:#f5c518"></div>
+                            </div><span class="lss-num">82</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="loadout-slot hud-card">
+                    <div class="ls-header">
+                        <div class="ls-icon cyan"><i class="fas fa-code"></i></div>
+                        <div>
+                            <div class="ls-title">FRONTEND</div>
+                            <div class="ls-sub">Combat Interface</div>
+                        </div>
+                        <div class="ls-tier cyan-t">TIER S</div>
+                    </div>
+                    <div class="ls-skills">
+                        <div class="lss-row"><span>HTML5</span>
+                            <div class="lss-bar">
+                                <div data-level="95" style="--c:#00d4ff"></div>
+                            </div><span class="lss-num">95</span>
+                        </div>
+                        <div class="lss-row"><span>CSS3</span>
+                            <div class="lss-bar">
+                                <div data-level="90" style="--c:#00d4ff"></div>
+                            </div><span class="lss-num">90</span>
+                        </div>
+                        <div class="lss-row"><span>JavaScript</span>
+                            <div class="lss-bar">
+                                <div data-level="88" style="--c:#00d4ff"></div>
+                            </div><span class="lss-num">88</span>
+                        </div>
+                        <div class="lss-row"><span>React</span>
+                            <div class="lss-bar">
+                                <div data-level="78" style="--c:#00d4ff"></div>
+                            </div><span class="lss-num">78</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Tech orbit / weapon wheel -->
+            <div class="weapon-wheel" id="weapon-wheel" aria-hidden="true">
+                <div class="ww-scene">
+                    <div class="ww-center"><span>TECH</span><span>STACK</span></div>
+                    <div class="ww-ring ww-r1">
+                        <div class="ww-item wi1"><i class="fab fa-figma"></i></div>
+                        <div class="ww-item wi2"><i class="fab fa-js"></i></div>
+                        <div class="ww-item wi3"><i class="fab fa-node-js"></i></div>
+                        <div class="ww-item wi4"><i class="fab fa-react"></i></div>
+                    </div>
+                    <div class="ww-ring ww-r2">
+                        <div class="ww-item wo1"><i class="fab fa-html5"></i></div>
+                        <div class="ww-item wo2"><i class="fab fa-css3-alt"></i></div>
+                        <div class="ww-item wo3"><i class="fab fa-php"></i></div>
+                        <div class="ww-item wo4"><i class="fab fa-git-alt"></i></div>
+                        <div class="ww-item wo5"><i class="fas fa-database"></i></div>
+                        <div class="ww-item wo6"><i class="fab fa-npm"></i></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ██ PROJECTS / MISSIONS ██ -->
+    <section id="projects">
+
+        <div class="container">
+            <div class="section-head">
+                <div class="sh-num">03</div>
+                <div class="sh-text">
+                    <span class="sh-tag">COMPLETED OPS</span>
+                    <h2 class="sh-title">CLASSIFIED <span class="accent-orange">MISSIONS</span></h2>
+                </div>
+                <div class="sh-line"></div>
+            </div>
+
+            <div class="missions-grid">
+
+                <div class="mission-card hud-card tilt-card">
+                    <div class="mc-status done">✔ COMPLETED</div>
+                    <div class="mc-banner" style="--mc:#00d4ff"><i class="fas fa-university"></i></div>
+                    <div class="mc-body">
+                        <div class="mc-tags"><span style="--tc:#00d4ff">UI/UX</span><span
+                                style="--tc:#00d4ff">Design</span></div>
+                        <h3 class="mc-name">PUSOM</h3>
+                        <p class="mc-desc">Purbanchal University School of Management portal — designed an intuitive
+                            student management system with streamlined UX and accessible interface architecture.</p>
+                        <div class="mc-difficulty">
+                            <span>DIFFICULTY:</span>
+                            <div class="diff-stars">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i><i class="far fa-star"></i>
+                            </div>
+                        </div>
+                        <div class="mc-actions">
+                            <a href="#" class="mc-btn"><i class="fas fa-external-link-alt"></i> DEPLOY</a>
+                            <a href="#" class="mc-btn ghost"><i class="fab fa-github"></i> CODE</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mission-card hud-card tilt-card">
+                    <div class="mc-status done">✔ COMPLETED</div>
+                    <div class="mc-banner" style="--mc:#aa44ff"><i class="fas fa-newspaper"></i></div>
+                    <div class="mc-body">
+                        <div class="mc-tags"><span style="--tc:#aa44ff">Web Dev</span><span
+                                style="--tc:#aa44ff">PHP</span></div>
+                        <h3 class="mc-name">BIRATINFO</h3>
+                        <p class="mc-desc">Local news and information portal for Biratnagar — a clean, fast-loading
+                            platform engineered for community engagement and real-time updates.</p>
+                        <div class="mc-difficulty">
+                            <span>DIFFICULTY:</span>
+                            <div class="diff-stars">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                        <div class="mc-actions">
+                            <a href="#" class="mc-btn"><i class="fas fa-external-link-alt"></i> DEPLOY</a>
+                            <a href="#" class="mc-btn ghost"><i class="fab fa-github"></i> CODE</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mission-card hud-card tilt-card">
+                    <div class="mc-status done">✔ COMPLETED</div>
+                    <div class="mc-banner" style="--mc:#39ff14"><i class="fas fa-seedling"></i></div>
+                    <div class="mc-body">
+                        <div class="mc-tags"><span style="--tc:#39ff14">Full Stack</span><span
+                                style="--tc:#39ff14">Node.js</span></div>
+                        <h3 class="mc-name">KISANPEDIA</h3>
+                        <p class="mc-desc">Agricultural knowledge platform for Nepali farmers — offline-first,
+                            multi-language, with focus on accessibility across low-bandwidth environments.</p>
+                        <div class="mc-difficulty">
+                            <span>DIFFICULTY:</span>
+                            <div class="diff-stars">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                        <div class="mc-actions">
+                            <a href="#" class="mc-btn"><i class="fas fa-external-link-alt"></i> DEPLOY</a>
+                            <a href="#" class="mc-btn ghost"><i class="fab fa-github"></i> CODE</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mission-card hud-card tilt-card">
+                    <div class="mc-status done">✔ COMPLETED</div>
+                    <div class="mc-banner" style="--mc:#ff6b6b"><i class="fas fa-futbol"></i></div>
+                    <div class="mc-body">
+                        <div class="mc-tags"><span style="--tc:#ff6b6b">E-commerce</span><span
+                                style="--tc:#ff6b6b">Figma</span></div>
+                        <h3 class="mc-name">TACKLES</h3>
+                        <p class="mc-desc">Sports equipment e-commerce platform — dynamic product catalog, frictionless
+                            checkout flow, mobile-first responsive design.</p>
+                        <div class="mc-difficulty">
+                            <span>DIFFICULTY:</span>
+                            <div class="diff-stars">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i><i class="far fa-star"></i>
+                            </div>
+                        </div>
+                        <div class="mc-actions">
+                            <a href="#" class="mc-btn"><i class="fas fa-external-link-alt"></i> DEPLOY</a>
+                            <a href="#" class="mc-btn ghost"><i class="fab fa-github"></i> CODE</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mission-card hud-card tilt-card">
+                    <div class="mc-status done">✔ COMPLETED</div>
+                    <div class="mc-banner" style="--mc:#ffa500"><i class="fas fa-car"></i></div>
+                    <div class="mc-body">
+                        <div class="mc-tags"><span style="--tc:#ffa500">Marketplace</span><span
+                                style="--tc:#ffa500">UX</span></div>
+                        <h3 class="mc-name">NEPAL MOTORS</h3>
+                        <p class="mc-desc">Automotive marketplace — immersive vehicle browsing with advanced filtering,
+                            comparison engine, and seamless dealer integration.</p>
+                        <div class="mc-difficulty">
+                            <span>DIFFICULTY:</span>
+                            <div class="diff-stars">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                        <div class="mc-actions">
+                            <a href="#" class="mc-btn"><i class="fas fa-external-link-alt"></i> DEPLOY</a>
+                            <a href="#" class="mc-btn ghost"><i class="fab fa-github"></i> CODE</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mission-card hud-card tilt-card">
+                    <div class="mc-status active">✔ ACTIVE OPS</div>
+                    <div class="mc-banner" style="--mc:#f5c518"><i class="fas fa-microphone-alt"></i></div>
+                    <div class="mc-body">
+                        <div class="mc-tags"><span style="--tc:#f5c518">Maintenance</span><span style="--tc:#f5c518">Web
+                                Ops</span></div>
+                        <h3 class="mc-name">DEEPAK BAJRACHARYA</h3>
+                        <p class="mc-desc">Official digital platform for the legendary Nepalese musician — maintaining
+                            high-performance delivery of multimedia content, tour updates, and interactive fan
+                            engagement features.</p>
+                        <div class="mc-difficulty">
+                            <span>DIFFICULTY:</span>
+                            <div class="diff-stars">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                        <div class="mc-actions">
+                            <a href="https://www.deepakbajracharya.com.np/home" target="_blank" class="mc-btn"><i
+                                    class="fas fa-external-link-alt"></i> DEPLOY</a>
+                            <a href="#" class="mc-btn ghost"><i class="fab fa-github"></i> CODE</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mission-card hud-card tilt-card">
+                    <div class="mc-status done">✔ COMPLETED</div>
+                    <div class="mc-banner" style="--mc:#ff44cc"><i class="fas fa-guitar"></i></div>
+                    <div class="mc-body">
+                        <div class="mc-tags"><span style="--tc:#ff44cc">UI/UX Design</span><span
+                                style="--tc:#ff44cc">Web Dev</span></div>
+                        <h3 class="mc-name">SACHIN RAUNIYAR</h3>
+                        <p class="mc-desc">Full-scale design and engineering of the official digital presence for the
+                            prominent Nepalese singer. Built from the ground up using vanilla HTML, CSS, and JavaScript
+                            for maximum performance and artistic control.</p>
+                        <div class="mc-difficulty">
+                            <span>DIFFICULTY:</span>
+                            <div class="diff-stars">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                        <div class="mc-actions">
+                            <a href="https://www.sachinrauniyar.com.np/" target="_blank" class="mc-btn"><i
+                                    class="fas fa-external-link-alt"></i> DEPLOY</a>
+                            <a href="#" class="mc-btn ghost"><i class="fab fa-github"></i> CODE</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mission-card hud-card tilt-card">
+                    <div class="mc-status done">✔ COMPLETED</div>
+                    <div class="mc-banner" style="--mc:#00d4ff"><i class="fas fa-utensils"></i></div>
+                    <div class="mc-body">
+                        <div class="mc-tags"><span style="--tc:#00d4ff">Web Dev</span><span
+                                style="--tc:#00d4ff">UI/UX</span></div>
+                        <h3 class="mc-name">GLOCAL MULTI CUISINE RESTAURANT</h3>
+                        <p class="mc-desc">Modern digital presence for Glocal Multi Cuisine Restaurant — featuring an
+                            interactive digital menu, reservation system, and an immersive user experience.</p>
+                        <div class="mc-difficulty">
+                            <span>DIFFICULTY:</span>
+                            <div class="diff-stars">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i><i class="far fa-star"></i>
+                            </div>
+                        </div>
+                        <div class="mc-actions">
+                            <a href="#" class="mc-btn"><i class="fas fa-external-link-alt"></i> DEPLOY</a>
+                            <a href="#" class="mc-btn ghost"><i class="fab fa-github"></i> CODE</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mission-card hud-card tilt-card">
+                    <div class="mc-status active">✔ ACTIVE OPS</div>
+                    <div class="mc-banner" style="--mc:#f5c518"><i class="fas fa-wrench"></i></div>
+                    <div class="mc-body">
+                        <div class="mc-tags"><span style="--tc:#f5c518">Maintenance</span><span
+                                style="--tc:#f5c518">Automobile</span></div>
+                        <h3 class="mc-name">NAIMA AUTOMOBILE</h3>
+                        <p class="mc-desc">Continuous technical maintenance and performance optimization for the Naima
+                            Automobile digital platform, ensuring high uptime and seamless functionality.</p>
+                        <div class="mc-difficulty">
+                            <span>DIFFICULTY:</span>
+                            <div class="diff-stars">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i><i class="far fa-star"></i>
+                            </div>
+                        </div>
+                        <div class="mc-actions">
+                            <a href="https://naimanepal.org/" target="_blank" class="mc-btn"><i
+                                    class="fas fa-external-link-alt"></i> DEPLOY</a>
+                            <a href="#" class="mc-btn ghost"><i class="fab fa-github"></i> CODE</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ██ EXPERIENCE / SERVICE RECORD ██ -->
+    <section id="experience">
+
+        <div class="container">
+            <div class="section-head">
+                <div class="sh-num">04</div>
+                <div class="sh-text">
+                    <span class="sh-tag">BATTLE HISTORY</span>
+                    <h2 class="sh-title">SERVICE <span class="accent-green">RECORD</span></h2>
+                </div>
+                <div class="sh-line"></div>
+            </div>
+
+            <div class="service-log">
+
+                <!-- 1 — DANPHELINK (orange) -->
+                <div class="sl-item">
+                    <div class="sl-marker">
+                        <div class="slm-dot"></div>
+                        <div class="slm-line"></div>
+                    </div>
+                    <div class="sl-date">2024 — PRESENT</div>
+                    <div class="sl-card hud-card">
+                        <div class="slc-scan"></div>
+                        <div class="slc-header">
+                            <div class="slc-icon orange"><i class="fas fa-globe"></i></div>
+                            <div class="slc-info">
+                                <h3>WEB DEVELOPER</h3>
+                                <span class="slc-org">DANPHELINK / ADvibe360</span>
+                            </div>
+                            <span class="slc-badge active">● ACTIVE</span>
+                        </div>
+                        <p>Building and maintaining web platforms for Danphelink's digital infrastructure. Developing
+                            responsive interfaces, integrating backend services, and ensuring high-performance delivery
+                            across all web channels.</p>
+                        <div class="slc-tags">
+                            <span>HTML</span><span>CSS</span><span>JavaScript</span><span>React</span><span>Web
+                                APIs</span><span>Node</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 2 — DANPHELINK VIDEO (green) -->
+                <div class="sl-item">
+                    <div class="sl-marker">
+                        <div class="slm-dot"></div>
+                        <div class="slm-line"></div>
+                    </div>
+                    <div class="sl-date">2024 — PRESENT</div>
+                    <div class="sl-card hud-card">
+                        <div class="slc-scan"></div>
+                        <div class="slc-header">
+                            <div class="slc-icon green"><i class="fas fa-film"></i></div>
+                            <div class="slc-info">
+                                <h3>VIDEO EDITOR</h3>
+                                <span class="slc-org">DANPHELINK</span>
+                            </div>
+                            <span class="slc-badge"
+                                style="color: var(--orange); border: 1px solid var(--orange); background: rgba(255, 102, 0, 0.08);">COMPLETED</span>
+                        </div>
+                        <p>Creating and editing promotional and corporate video content for Danphelink's digital
+                            channels.
+                            Handling motion graphics, colour grading, and post-production to deliver polished
+                            high-impact visual media.</p>
+                        <div class="slc-tags">
+                            <span>Premiere Pro</span><span>After Effects</span><span>Motion Graphics</span><span>Colour
+                                Grading</span><span>Post-Production</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 3 — SRIYOG (purple) -->
+                <div class="sl-item">
+                    <div class="sl-marker">
+                        <div class="slm-dot"></div>
+                        <div class="slm-line"></div>
+                    </div>
+                    <div class="sl-date">2022 — 2023</div>
+                    <div class="sl-card hud-card">
+                        <div class="slc-scan"></div>
+                        <div class="slc-header">
+                            <div class="slc-icon purple"><i class="fas fa-palette"></i></div>
+                            <div class="slc-info">
+                                <h3>UI/UX DESIGNER INTERN</h3>
+                                <span class="slc-org">SRIYOG</span>
+                            </div>
+                            <span class="slc-badge intern">INTERNSHIP</span>
+                        </div>
+                        <p>Designed interfaces for PUSOM, Biratinfo, Kisanpedia, Tackles, and Nepal Motors. Conducted
+                            user research, built wireframes, and shipped high-fidelity Figma prototypes. Established
+                            design systems used across 5 products.</p>
+                        <div class="slc-tags">
+                            <span>Figma</span><span>UI Design</span><span>Prototyping</span><span>User
+                                Research</span><span>Design Systems</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 3 — SPIRALOGICS (cyan) -->
+                <div class="sl-item">
+                    <div class="sl-marker">
+                        <div class="slm-dot"></div>
+                        <div class="slm-line"></div>
+                    </div>
+                    <div class="sl-date">2023 — PRESENT</div>
+                    <div class="sl-card hud-card">
+                        <div class="slc-scan"></div>
+                        <div class="slc-header">
+                            <div class="slc-icon cyan"><i class="fas fa-code"></i></div>
+                            <div class="slc-info">
+                                <h3>WEB DEVELOPER</h3>
+                                <span class="slc-org">SPIRALOGICS</span>
+                            </div>
+                            <span class="slc-badge tech">Tech programs</span>
+                        </div>
+                        <p>Engineered and maintained scalable web applications. Led feature development across multiple
+                            product lines using Node.js, JavaScript, and PHP. Collaborated with cross-functional squads
+                            to ship mission-critical software on time.</p>
+                        <div class="slc-tags">
+                            <span>HTML</span><span>CSS</span><span>JavaScript</span><span>React</span><span>Node
+                                modules</span><span>Database</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 4 — EDUCATION (gold) -->
+                <div class="sl-item">
+                    <div class="sl-marker">
+                        <div class="slm-dot"></div>
+                    </div>
+                    <div class="sl-date">2019 — 2023</div>
+                    <div class="sl-card hud-card">
+                        <div class="slc-scan"></div>
+                        <div class="slc-header">
+                            <div class="slc-icon gold"><i class="fas fa-graduation-cap"></i></div>
+                            <div class="slc-info">
+                                <h3>B.E. COMPUTER ENGINEERING</h3>
+                                <span class="slc-org">PURBANCHAL UNIVERSITY</span>
+                            </div>
+                            <span class="slc-badge edu">EDUCATION</span>
+                        </div>
+                        <p>Graduated with strong foundations in algorithms, data structures, computer networks,
+                            operating systems, and software engineering. Completed multiple real-world capstone projects
+                            and hackathons.</p>
+                        <div class="slc-tags">
+                            <span>HTML</span><span>CSS</span><span>JavaScript</span><span>React</span><span>Node.js</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ██ LEADERSHIP / MEDALS ██ -->
+    <section id="leadership">
+
+        <div class="container">
+            <div class="section-head">
+                <div class="sh-num">05</div>
+                <div class="sh-text">
+                    <span class="sh-tag">ACHIEVEMENTS UNLOCKED</span>
+                    <h2 class="sh-title">MEDALS &amp; <span class="accent-purple">HONORS</span></h2>
+                </div>
+                <div class="sh-line"></div>
+            </div>
+
+            <div class="medals-grid">
+
+                <div class="medal-card hud-card">
+                    <div class="medal-icon purple">
+                        <i class="fas fa-crown"></i>
+                        <div class="medal-glow"></div>
+                    </div>
+                    <div class="medal-rank">GOLD RANK</div>
+                    <h3>PRESIDENT</h3>
+                    <div class="medal-org">Rotaract Club of Matribhumi Kathmandu</div>
+                    <p>Led 50+ members through community service missions. Organised 20+ high-impact events including
+                        blood drives, fundraisers, and youth empowerment programmes.</p>
+                    <div class="medal-stats">
+                        <div class="ms-item"><span class="ms-n">50+</span><span class="ms-l">Members</span></div>
+                        <div class="ms-item"><span class="ms-n">20+</span><span class="ms-l">Events</span></div>
+                    </div>
+                </div>
+
+                <div class="medal-card hud-card">
+                    <div class="medal-icon cyan">
+                        <i class="fas fa-pen-nib"></i>
+                        <div class="medal-glow"></div>
+                    </div>
+                    <div class="medal-rank">SILVER RANK</div>
+                    <h3>SECRETARY</h3>
+                    <div class="medal-org">Rotaract Club of Matribhumi Kathmandu</div>
+                    <p>Managed all club operations, maintained member records, coordinated agendas and communications
+                        between club members and district leadership for 2 consecutive years.</p>
+                    <div class="medal-stats">
+                        <div class="ms-item"><span class="ms-n">2</span><span class="ms-l">Yrs Active</span></div>
+                        <div class="ms-item"><span class="ms-n">100+</span><span class="ms-l">Lives Impacted</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="medal-card hud-card medal-featured">
+                    <div class="medal-icon green">
+                        <i class="fas fa-globe-asia"></i>
+                        <div class="medal-glow"></div>
+                    </div>
+                    <div class="medal-rank">LEGEND</div>
+                    <h3>ROTARACT VALUES</h3>
+                    <div class="medal-org">Rotary International · Service Above Self</div>
+                    <p>Active participant in Rotary International's global youth wing. Collaborated on international
+                        exchange programmes, cross-cultural initiatives, and district-level operations.</p>
+                    <div class="achievement-badges">
+                        <span><i class="fas fa-heart"></i> SERVICE</span>
+                        <span><i class="fas fa-handshake"></i> FELLOWSHIP</span>
+                        <span><i class="fas fa-lightbulb"></i> LEADERSHIP</span>
+                        <span><i class="fas fa-globe"></i> COMMUNITY</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ██ CONTACT / SECURE COMMS ██ -->
+    <section id="contact">
+
+        <div class="container">
+            <div class="section-head">
+                <div class="sh-num">06</div>
+                <div class="sh-text">
+                    <span class="sh-tag">ESTABLISH LINK</span>
+                    <h2 class="sh-title">SECURE <span class="accent-gold">COMMS</span></h2>
+                </div>
+                <div class="sh-line"></div>
+            </div>
+
+            <div class="comms-grid">
+                <div class="comms-info">
+                    <div class="ci-header">
+                        <div class="ci-signal">
+                            <div class="signal-bar s1"></div>
+                            <div class="signal-bar s2"></div>
+                            <div class="signal-bar s3"></div>
+                            <div class="signal-bar s4"></div>
+                        </div>
+                        <span class="ci-status">TRANSMISSION CHANNEL OPEN</span>
+                    </div>
+                    <p>Operator is standing by. Whether you have a mission to assign, want to collaborate, or just want
+                        to make contact — channel is always open. Response within 24 hours guaranteed.</p>
+
+                    <div class="comms-channels">
+                        <a href="mailto:milanlamsal2020@gmail.com" class="cc-item">
+                            <div class="cc-icon"><i class="fas fa-envelope"></i></div>
+                            <div><span class="cc-label">SECURE EMAIL</span><span
+                                    class="cc-val">milanlamsal2020@gmail.com</span></div>
+                        </a>
+                        <div class="cc-item">
+                            <div class="cc-icon"><i class="fas fa-map-marker-alt"></i></div>
+                            <div><span class="cc-label">BASE LOCATION</span><span class="cc-val">Kathmandu, Nepal</span>
+                            </div>
+                        </div>
+                        <div class="cc-item">
+                            <div class="cc-icon"><i class="fas fa-clock"></i></div>
+                            <div><span class="cc-label">RESPONSE TIME</span><span class="cc-val online-blink">● &lt; 24
+                                    HOURS</span></div>
+                        </div>
+                    </div>
+
+                    <div class="comms-socials">
+                        <a href="#" class="cs-btn" aria-label="GitHub"> <i class="fab fa-github"></i></a>
+                        <a href="#" class="cs-btn" aria-label="LinkedIn"> <i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="cs-btn" aria-label="Twitter"> <i class="fab fa-twitter"></i></a>
+                        <a href="#" class="cs-btn" aria-label="Dribbble"> <i class="fab fa-dribbble"></i></a>
+                        <a href="#" class="cs-btn" aria-label="Behance"> <i class="fab fa-behance"></i></a>
+                    </div>
+                </div>
+
+                <div class="terminal-wrap">
+                    <div class="terminal hud-card">
+                        <div class="term-topbar">
+                            <div class="ttb-dots">
+                                <span class="td red"></span>
+                                <span class="td yellow"></span>
+                                <span class="td green"></span>
+                            </div>
+                            <span class="ttb-title">TRANSMISSION_COMPOSER.exe</span>
+                            <span class="ttb-enc">ENC: AES-256</span>
+                        </div>
+                        <form id="contact-form" class="term-form" novalidate>
+                            <div class="tf-row">
+                                <div class="tf-group">
+                                    <label class="tf-label">// SENDER_NAME</label>
+                                    <div class="tf-input-wrap">
+                                        <span class="tf-prompt">></span>
+                                        <input type="text" id="f-name" name="name" placeholder="Your name"
+                                            autocomplete="name" required>
+                                    </div>
+                                </div>
+                                <div class="tf-group">
+                                    <label class="tf-label">// SENDER_EMAIL</label>
+                                    <div class="tf-input-wrap">
+                                        <span class="tf-prompt">></span>
+                                        <input type="email" id="f-email" name="email" placeholder="your@email.com"
+                                            autocomplete="email" required>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tf-group">
+                                <label class="tf-label">// SUBJECT_LINE</label>
+                                <div class="tf-input-wrap">
+                                    <span class="tf-prompt">></span>
+                                    <input type="text" id="f-subject" name="subject"
+                                        placeholder="Mission briefing title">
+                                </div>
+                            </div>
+                            <div class="tf-group">
+                                <label class="tf-label">// MESSAGE_BODY</label>
+                                <div class="tf-input-wrap tf-textarea">
+                                    <span class="tf-prompt">></span>
+                                    <textarea id="f-message" name="message" rows="5"
+                                        placeholder="Type your transmission here..." required></textarea>
+                                </div>
+                            </div>
+                            <button type="submit" class="game-btn primary btn-full" id="submit-btn">
+                                <i class="fas fa-satellite-dish"></i> TRANSMIT MESSAGE
+                            </button>
+                            <div class="tf-success" id="form-success" role="alert">
+                                <i class="fas fa-check-circle"></i>
+                                <span>TRANSMISSION RECEIVED — Operator will respond within 24 hours.</span>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ██ FOOTER ██ -->
+    <footer id="footer">
+        <div class="container">
+            <div class="footer-inner">
+                <div class="fi-brand">
+                    <div class="brand-hex sm"><span>ML</span></div>
+                    <div>
+                        <div class="fib-name">MILAN LAMSAL</div>
+                        <div class="fib-sub">Digital Operator · Level 99</div>
+                    </div>
+                </div>
+                <nav class="fi-links">
+                    <a href="#about">PROFILE</a>
+                    <a href="#skills">LOADOUT</a>
+                    <a href="#projects">MISSIONS</a>
+                    <a href="#experience">SERVICE</a>
+                    <a href="#leadership">MEDALS</a>
+                    <a href="#contact">COMMS</a>
+                </nav>
+                <div class="fi-social">
+                    <a href="#" aria-label="GitHub"> <i class="fab fa-github"></i></a>
+                    <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#" aria-label="Dribbble"><i class="fab fa-dribbble"></i></a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <span>© <span id="year">2024</span> MILAN LAMSAL — ALL RIGHTS RESERVED</span>
+                <a href="#hero" class="back-top" aria-label="Back to top"><i class="fas fa-chevron-up"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script type="module" src="https://unpkg.com/@splinetool/viewer@1.9.36/build/spline-viewer.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="main.js"></script>
+</body>
+
+</html>
