@@ -598,6 +598,46 @@ function initYear() {
 }
 
 /* ============================================================
+   LETTER VIEWER
+   ============================================================ */
+function initLetterViewer() {
+    const viewer  = qs('#letter-viewer');
+    const frame   = qs('#lv-frame');
+    const close   = qs('#lv-close');
+    const dlBtn   = qs('#lv-download');
+    const cards   = qsa('.letter-card');
+    const backdrop = qs('.lv-backdrop');
+    if (!viewer || !frame) return;
+
+    const open = (src) => {
+        frame.src = src;
+        dlBtn.href = src;
+        viewer.setAttribute('aria-hidden', 'false');
+        viewer.classList.add('active');
+        document.body.style.overflow = 'hidden';
+    };
+
+    const closeViewer = () => {
+        viewer.classList.remove('active');
+        viewer.setAttribute('aria-hidden', 'true');
+        document.body.style.overflow = '';
+        setTimeout(() => { frame.src = ''; }, 400);
+    };
+
+    cards.forEach(c => c.addEventListener('click', () => {
+        const iframe = c.querySelector('.letter-pdf');
+        if (iframe) open(iframe.src);
+    }));
+
+    close.addEventListener('click', closeViewer);
+    backdrop.addEventListener('click', closeViewer);
+
+    document.addEventListener('keydown', e => {
+        if (e.key === 'Escape') closeViewer();
+    });
+}
+
+/* ============================================================
    INIT
    ============================================================ */
 document.addEventListener('DOMContentLoaded', () => {
@@ -612,5 +652,6 @@ document.addEventListener('DOMContentLoaded', () => {
     initCursorGlow();
     initYear();
     initExperienceAnimations();
+    initLetterViewer();
     initLoader(); // loader calls revealHero() when done
 });

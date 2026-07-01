@@ -565,6 +565,84 @@ spline-viewer::part(logo) {
     .letter-card:hover { height: 420px; }
 }
 
+/* ── LETTER VIEWER MODAL ──────────────────────────────────────────── */
+.letter-viewer {
+    position: fixed; inset: 0; z-index: 99999;
+    display: flex; align-items: center; justify-content: center;
+    opacity: 0; pointer-events: none;
+    transition: opacity 0.35s ease;
+}
+.letter-viewer.active {
+    opacity: 1; pointer-events: all;
+}
+
+.lv-backdrop {
+    position: absolute; inset: 0;
+    background: rgba(0, 0, 0, 0.85);
+    backdrop-filter: blur(6px);
+}
+
+.lv-modal {
+    position: relative;
+    width: 92vw; height: 92vh;
+    background: var(--bg);
+    border: 1px solid var(--cyan);
+    box-shadow: 0 0 60px var(--cyan-glow);
+    display: flex; flex-direction: column;
+    z-index: 1;
+    animation: lvFadeIn 0.3s ease;
+}
+
+@keyframes lvFadeIn {
+    from { opacity: 0; transform: scale(0.95); }
+    to   { opacity: 1; transform: scale(1); }
+}
+
+.lv-topbar {
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 14px 24px;
+    border-bottom: 1px solid var(--cyan-dim);
+    background: var(--bg-alt);
+    flex-shrink: 0;
+}
+
+.lv-back-btn {
+    font-family: var(--font-head); font-size: 0.85rem; letter-spacing: 2px;
+    color: var(--cyan); background: none; border: 1px solid var(--cyan-dim);
+    padding: 8px 20px; display: flex; align-items: center; gap: 10px;
+    cursor: pointer; transition: var(--t);
+}
+.lv-back-btn:hover {
+    background: var(--cyan); color: #000; box-shadow: 0 0 20px var(--cyan-glow);
+}
+
+.lv-title {
+    font-family: var(--font-head); font-size: 0.85rem; letter-spacing: 3px;
+    color: var(--text-2);
+}
+
+.lv-dl-btn {
+    font-size: 1.1rem; color: var(--text-2); padding: 8px 16px;
+    border: 1px solid var(--cyan-dim); transition: var(--t);
+}
+.lv-dl-btn:hover {
+    color: var(--cyan); border-color: var(--cyan); box-shadow: 0 0 15px var(--cyan-glow);
+}
+
+.lv-body {
+    flex: 1; overflow: hidden;
+}
+
+.lv-frame {
+    width: 100%; height: 100%; border: none;
+}
+
+@media (max-width: 768px) {
+    .lv-modal { width: 100vw; height: 100vh; }
+    .lv-topbar { padding: 10px 14px; }
+    .lv-title { font-size: 0.7rem; }
+}
+
 /* ── MEDALS ──────────────────────────────────────────────────── */
 .medals-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; }
 .medal-card { text-align: center; padding: 50px 30px; }

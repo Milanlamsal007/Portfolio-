@@ -1057,6 +1057,25 @@
         </div>
     </footer>
 
+    <!-- ██ LETTER VIEWER MODAL ██ -->
+    <div id="letter-viewer" class="letter-viewer" aria-hidden="true">
+        <div class="lv-backdrop"></div>
+        <div class="lv-modal">
+            <div class="lv-topbar">
+                <button id="lv-close" class="lv-back-btn" aria-label="Close viewer">
+                    <i class="fas fa-arrow-left"></i> BACK
+                </button>
+                <span class="lv-title">EXPERIENCE LETTER</span>
+                <a id="lv-download" class="lv-dl-btn" download aria-label="Download PDF">
+                    <i class="fas fa-download"></i>
+                </a>
+            </div>
+            <div class="lv-body">
+                <iframe id="lv-frame" class="lv-frame" title="Letter preview"></iframe>
+            </div>
+        </div>
+    </div>
+
     <script type="module" src="https://unpkg.com/@splinetool/viewer@1.9.36/build/spline-viewer.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
