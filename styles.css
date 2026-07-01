@@ -508,6 +508,63 @@ spline-viewer::part(logo) {
     50%       { box-shadow: 0 0 18px rgba(57,255,20,0.6); }
 }
 
+/* ── EXPERIENCE LETTERS ──────────────────────────────────────────── */
+
+.letters-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.letter-card {
+    position: relative;
+    background: var(--bg-hud);
+    border: 1px solid var(--cyan-dim);
+    backdrop-filter: blur(8px);
+    overflow: hidden;
+    height: 320px;
+    cursor: pointer;
+    transition: height 0.5s var(--ease), border-color 0.5s var(--ease), box-shadow 0.5s var(--ease);
+    will-change: height;
+    padding: 14px;
+}
+
+.letter-card:hover {
+    height: 620px;
+    z-index: 10;
+}
+
+.lc-cyan { border-top: 2px solid var(--cyan); }
+.lc-cyan:hover {
+    border-color: var(--cyan);
+    box-shadow: 0 0 40px var(--cyan-glow), inset 0 0 60px rgba(0, 212, 255, 0.05);
+}
+
+.lc-gold { border-top: 2px solid var(--gold); }
+.lc-gold:hover {
+    border-color: var(--gold);
+    box-shadow: 0 0 40px var(--gold-glow), inset 0 0 60px rgba(245, 197, 24, 0.05);
+}
+
+.lc-green { border-top: 2px solid var(--green); }
+.lc-green:hover {
+    border-color: var(--green);
+    box-shadow: 0 0 40px var(--green-glow), inset 0 0 60px rgba(57, 255, 20, 0.05);
+}
+
+.letter-pdf {
+    width: 100%;
+    height: 800px;
+    border: none;
+    pointer-events: none;
+}
+
+@media (max-width: 768px) {
+    .letters-grid { grid-template-columns: 1fr; }
+    .letter-card { height: 160px; }
+    .letter-card:hover { height: 420px; }
+}
+
 /* ── MEDALS ──────────────────────────────────────────────────── */
 .medals-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; }
 .medal-card { text-align: center; padding: 50px 30px; }
