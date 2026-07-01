@@ -302,7 +302,7 @@ spline-viewer::part(logo) {
 .lss-row { display: flex; align-items: center; gap: 15px; margin-bottom: 12px; font-family: var(--font-mono); font-size: 0.8rem; }
 .lss-row span:first-child { width: 100px; color: var(--text-2); }
 .lss-bar { flex: 1; height: 3px; background: rgba(255,255,255,0.05); }
-.lss-bar div { height: 100%; width: 0; background: var(--c); box-shadow: 0 0 10px var(--c); transition: width 1.5s var(--ease); }
+.lss-bar div { height: 100%; width: 0; background: var(--c); box-shadow: 0 0 10px var(--c); transition: width 0.8s var(--ease); }
 
 .weapon-wheel { height: 500px; display: flex; align-items: center; justify-content: center; margin-top: 80px; }
 .ww-scene { position: relative; width: 400px; height: 400px; }

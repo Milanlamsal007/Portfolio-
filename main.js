@@ -280,14 +280,20 @@ function initCounters() {
 /* ============================================================
    GSAP SCROLL ANIMATIONS
    ============================================================ */
+function initSkillBars() {
+    const bars = qsa('.csl-fill, .lss-bar div');
+    bars.forEach((bar, i) => {
+        const val = bar.dataset.level || bar.style.getPropertyValue('--w')?.replace('%', '');
+        if (val) {
+            setTimeout(() => { bar.style.width = val + '%'; }, 400 + i * 100);
+        }
+    });
+}
+
 function initScrollAnimations() {
-    if (typeof gsap === 'undefined' || typeof ScrollTrigger === 'undefined') {
-        qsa('.csl-fill, .lss-bar div').forEach(f => { 
-            const val = f.dataset.level || f.style.getPropertyValue('--w')?.replace('%', '');
-            if (val) f.style.width = val + '%'; 
-        });
-        return;
-    }
+    initSkillBars();
+
+    if (typeof gsap === 'undefined' || typeof ScrollTrigger === 'undefined') return;
     gsap.registerPlugin(ScrollTrigger);
 
     /* Section headers */
@@ -302,19 +308,15 @@ function initScrollAnimations() {
     gsap.from('.about-cards', { opacity:0, x:56, duration:.85, ease:'power3.out',
         scrollTrigger:{trigger:'#about', start:'top 78%', once:true}});
 
-    /* Skills cards */
-    gsap.from('.loadout-slot', { opacity:0, y:50, duration:.8, stagger:.14, ease:'power3.out',
-        scrollTrigger:{trigger:'.loadout-grid', start:'top 80%', once:true}});
+    /* Skills cards entrance */
+    gsap.from('.loadout-slot', { y:40, duration:.8, stagger:.14, ease:'power3.out',
+        scrollTrigger:{trigger:'.loadout-grid', start:'top 80%', once:true},
+        clearProps:'transform' });
 
-    /* Skill bars */
+    /* Skill bars scroll retrigger */
     ScrollTrigger.create({
         trigger: '#skills', start: 'top 75%', once: true,
-        onEnter: () => {
-            qsa('.csl-fill, .lss-bar div').forEach(f => {
-                const val = f.dataset.level || f.style.getPropertyValue('--w')?.replace('%', '');
-                if (val) f.style.width = val + '%';
-            });
-        }
+        onEnter: () => { initSkillBars(); }
     });
 
     /* Weapon Wheel */
